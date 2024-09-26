@@ -2,9 +2,11 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 
-data = {'Year': [2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020],
-        'Sales Amount': [24, 27, 22],
-        'Region': ['North', 'South', 'East', 'West']}
+data = {
+    'Year': [2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020],
+    'Sales Amount': [24, 27, 22, 30, 25, 29, 31, 26, 28, 32, 35],  # Expanded sales amount to 11 rows
+    'Region': ['North', 'South', 'East', 'West', 'North', 'South', 'East', 'West', 'North', 'South', 'East']  # Expanded regions
+}
 df = pd.DataFrame(data)
 df.to_csv('data.csv', index=False)
 df.to_html('data.html')
